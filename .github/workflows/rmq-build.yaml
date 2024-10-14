@@ -14,15 +14,16 @@ on:
   workflow_dispatch:
     inputs:
       push:
-       type: boolean
-       required: true
+        description: 'Boolean input to determine whether to push the Docker image to Harbor'
+        required: true
+        type: boolean
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the code from the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       # Step 2: Set up Docker Buildx (for building multi-platform images)
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
