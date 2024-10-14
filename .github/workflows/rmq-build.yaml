@@ -36,12 +36,15 @@ jobs:
             dotnet-version: '8.x'
      # Step 4: Restore .NET dependencies
        - name: Restore dependencies
+         working-directory: ./src
          run: dotnet restore
      # Step 5: Build the RabbitMQ application
        - name: Build the RabbitMQ application
+         working-directory: ./src
          run: dotnet build --configuration Release --no-restore
      # Step 6: Run unit tests and collect code coverage
        - name: Run unit tests
+         working-directory: ./src
          run: dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults --no-build
          continue-on-error: false
      # Step 7: Verify test coverage (requires minimum of 85%)
