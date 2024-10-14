@@ -1,4 +1,4 @@
-me: RabbitMQ Build and Deploy
+name: RabbitMQ Build and Deploy
 
 on:
   pull_request:
@@ -21,7 +21,7 @@ on:
 jobs:
   build:
      runs-on: ubuntu-latest
-     steps:
+       steps:
        # Step 1: Checkout the code from the repository
               - name: Checkout code
                 uses: actions/checkout@v3
@@ -55,11 +55,11 @@ jobs:
                      exit 1                                                                                                                  
                     fi
                 shell: bash            
-        # Step 8: Build Docker image using the Dockerfile in the root of the repository
+       # Step 8: Build Docker image using the Dockerfile in the root of the repository
                - name: Build Docker image
                  run: |
                     docker build -t rmq-app:${{ github.sha }} .
-         # Step 9: Push Docker image to Harbor if conditions are met
+       # Step 9: Push Docker image to Harbor if conditions are met
                - name: Push Docker image to Harbor
                  if: ${{ github.event_name == 'push' || github.event.inputs.push == 'true' }}
                  run: |
