@@ -1,0 +1,8 @@
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.csproj.AssemblyReference.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.AssemblyInfoInputs.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.AssemblyInfo.cs
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.csproj.CoreCompileInputs.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.MvcApplicationPartsAssemblyInfo.cs
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.MvcApplicationPartsAssemblyInfo.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.sourcelink.json
