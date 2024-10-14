@@ -17,7 +17,6 @@ on:
         description: 'Boolean input to determine whether to push the Docker image to Harbor'
         required: true
         type: boolean
-        required: false
 jobs:
   build:
     runs-on: ubuntu-latest
