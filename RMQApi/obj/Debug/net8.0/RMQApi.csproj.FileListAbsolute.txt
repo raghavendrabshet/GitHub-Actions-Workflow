@@ -9,8 +9,6 @@
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/appsettings.Development.json
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/appsettings.json
-/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/RMQApi.Tests/obj/project.assets.json
-/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/RMQApi.Tests/obj/RMQApi.Tests.csproj.nuget.dgspec.json
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll
