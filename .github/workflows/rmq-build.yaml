@@ -39,18 +39,23 @@ jobs:
          run: |
               cd RMQApi
               dotnet restore RMQApi.csproj
-     # Step 5: Build the RabbitMQ application
+     # Step 5: Clean the project
+       - name: Clean the project
+         run: |
+              cd RMQApi
+              dotnet clean
+     # Step 6: Build the RabbitMQ application
        - name: Build the RabbitMQ application
          run: |
               cd RMQApi   
-              dotnet build RMQApi.csproj
-     # Step 6: Run unit tests and collect code coverage
+              dotnet build RMQApi.csproj --configuration Release
+     # Step 7: Run unit tests and collect code coverage
        - name: Run unit tests
          run: |
               cd RMQApi/RMQApi.Tests   
               dotnet test 
          continue-on-error: false
-     # Step 7: Verify test coverage (requires minimum of 85%)
+     # Step 8: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
@@ -62,11 +67,11 @@ jobs:
                 exit 1                                                                                                                  
               fi
          shell: bash            
-     # Step 8: Build Docker image using the Dockerfile in the root of the repository
+     # Step 9: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
          run: |
               docker build -t rmq-app:${{ github.sha }} .
-     # Step 9: Push Docker image to Harbor if conditions are met
+     # Step 10: Push Docker image to Harbor if conditions are met
        - name: Push Docker image to Harbor
          if: ${{ github.event_name == 'push' || github.event.inputs.push == 'true' }}
          run: |
