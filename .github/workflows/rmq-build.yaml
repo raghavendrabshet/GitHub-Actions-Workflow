@@ -41,7 +41,9 @@ jobs:
               dotnet restore RMQApi.csproj
      # Step 5: Build the RabbitMQ application
        - name: Build the RabbitMQ application
-         run: dotnet build --configuration Release --no-restore
+         run: |
+              cd RMQApi   
+              dotnet build RMQApi.csproj
      # Step 6: Run unit tests and collect code coverage
        - name: Run unit tests
          run: dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults --no-build
