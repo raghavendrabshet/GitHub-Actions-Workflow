@@ -52,12 +52,12 @@ jobs:
      # Step 7: Run unit tests and collect code coverage
        - name: Run unit tests
          run: |
-              cd RMQApi/RMQApi.Tests   
-              dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./  
+              cd RMQApi/RMQApi.Tests
+              dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./testResults/   
          continue-on-error: false
      # Temporary step to list files in testResults
        - name: List test results directory
-         run: ls -R .
+         run: ls -R /RMQApi/RMQApi.Tests/testResults
      # Debug step to print the contents of Summary.txt
        - name: Print test coverage summary
          run: cat testResults/coverage/Summary.txt    
