@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RMQApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff21db9eb07086b7587c4cbdae07ef99867f3538")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+981d204014216b2cc4cb8df3d2a6a229e4e3b4ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("RMQApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RMQApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
