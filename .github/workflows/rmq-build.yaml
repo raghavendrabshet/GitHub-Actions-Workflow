@@ -37,7 +37,7 @@ jobs:
      # Step 4: Restore .NET dependencies
        - name: Restore dependencies
          run: |
-              dotnet restore /usr/share/dotnet
+              dotnet restore
      # Step 5: Build the RabbitMQ application
        - name: Build the RabbitMQ application
          run: dotnet build --configuration Release --no-restore
