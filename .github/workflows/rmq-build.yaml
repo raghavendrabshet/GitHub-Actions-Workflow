@@ -60,8 +60,8 @@ jobs:
          run: |
               cd RMQApi/RMQApi.Tests
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
-              reportgenerator -reports:testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
-              coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
+              reportgenerator -reports:RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:RMQApi.Tests/testResults/coverage -reporttypes:TextSummary
+              coverage=$(cat RMQApi.Tests/testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
               echo "Test Coverage: $coverage%"
               if (( $(echo "$coverage < 85.0" | bc -l) )); then
                  echo "Test coverage is below 85% - failing the build."
