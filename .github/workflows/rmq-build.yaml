@@ -55,12 +55,10 @@ jobs:
               cd RMQApi/RMQApi.Tests   
               dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura 
          continue-on-error: false
-     # Temporary step to list files in testResults
-       - name: List test results directory
-         run: ls -R testResults
      # Step 8: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
          run: |
+              cd RMQApi/RMQApi.Tests
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
               reportgenerator -reports:testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
               coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
