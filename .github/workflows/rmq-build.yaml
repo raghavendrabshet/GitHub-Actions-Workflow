@@ -65,14 +65,20 @@ jobs:
               reportgenerator -reports:RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
               coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
               echo "Test Coverage: $coverage%"
+              # Check if coverage is empty
               if [[ -z "$coverage" ]]; then
-                echo "No coverage data found - failing the build."
-                exit 1
+                 echo "No coverage data found - failing the build."
+                 exit 1
               fi
-              if (( $(echo "$coverage < 85.0" | bc -l) )); then
-                echo "Test coverage is below 85% - failing the build."
-                exit 1
+              # Check if coverage is greater than 0% before comparing to 85%
+              if (( $(echo "$coverage > 0" | bc -l) )); then 
+                if (( $(echo "$coverage < 85.0" | bc -l) )); then
+                  echo "Test coverage is below 85% - failing the build."
+                  exit 1
               fi
+             else
+              echo "Coverage is 0%. This is expected as there are no tests yet."
+              fi   
          shell: bash            
      # Step 9: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
