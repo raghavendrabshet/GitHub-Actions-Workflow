@@ -57,7 +57,7 @@ jobs:
          continue-on-error: false
      # Temporary step to list files in testResults
        - name: List test results directory
-         run: ls -R testResults
+         run: ls -R RMQApi/RMQApi.Tests 
      # Debug step to print the contents of Summary.txt
        - name: Print test coverage summary
          run: cat testResults/coverage/Summary.txt    
