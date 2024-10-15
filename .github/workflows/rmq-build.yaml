@@ -48,7 +48,7 @@ jobs:
        - name: Build the RabbitMQ application
          run: |
               cd RMQApi   
-              dotnet build RMQApi.csproj --configuration Release
+              dotnet build
      # Step 7: Run unit tests and collect code coverage
        - name: Run unit tests
          run: |
