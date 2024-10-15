@@ -11,9 +11,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("RMQApi")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+947fe4b85b0d5770e88814d02ff34cb00986b1e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fa7470ad1a887cfd90ddff79cf255709c097430")]
 [assembly: System.Reflection.AssemblyProductAttribute("RMQApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RMQApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

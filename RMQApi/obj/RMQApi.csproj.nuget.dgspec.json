@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj": {}
+    "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/RMQApi.csproj": {}
   },
   "projects": {
-    "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj": {
+    "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/RMQApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj",
+        "projectUniqueName": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/RMQApi.csproj",
         "projectName": "RMQApi",
-        "projectPath": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj",
+        "projectPath": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/RMQApi.csproj",
         "packagesPath": "/home/raghavendrabshet/.nuget/packages/",
-        "outputPath": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/",
+        "outputPath": "/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/raghavendrabshet/.nuget/NuGet/NuGet.Config"

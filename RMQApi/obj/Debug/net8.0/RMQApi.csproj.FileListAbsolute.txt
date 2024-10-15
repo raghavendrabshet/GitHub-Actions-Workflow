@@ -115,3 +115,14 @@
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.pdb
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/RMQApi.genruntimeconfig.cache
 /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/obj/Debug/net8.0/ref/RMQApi.dll
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.csproj.AssemblyReference.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.AssemblyInfoInputs.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.AssemblyInfo.cs
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.csproj.CoreCompileInputs.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.MvcApplicationPartsAssemblyInfo.cs
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.MvcApplicationPartsAssemblyInfo.cache
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.sourcelink.json
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.dll
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/refint/RMQApi.dll
+/home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/RMQApi/obj/Debug/net8.0/RMQApi.pdb
