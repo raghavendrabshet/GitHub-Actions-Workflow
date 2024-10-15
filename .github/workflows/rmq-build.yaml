@@ -56,7 +56,7 @@ jobs:
               if (( $(echo "$coverage < 85.0" | bc -l) )); then
                 echo "Test coverage is below 85% - failing the build."
                 exit 1                                                                                                                  
-            fi
+              fi
          shell: bash            
      # Step 8: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
