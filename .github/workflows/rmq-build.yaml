@@ -63,6 +63,9 @@ jobs:
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
               reportgenerator -reports:RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
+     # Debug step to print the contents of Summary.txt
+       - name: Print test coverage summary
+         run: cat testResults/coverage/Summary.txt
               coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
               echo "Test Coverage: $coverage%"
               if [[ -z "$coverage" ]]; then
