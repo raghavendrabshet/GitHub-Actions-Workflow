@@ -53,7 +53,7 @@ jobs:
        - name: Run unit tests
          run: |
               cd RMQApi/RMQApi.Tests   
-              dotnet test 
+              dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura 
          continue-on-error: false
      # Step 8: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
