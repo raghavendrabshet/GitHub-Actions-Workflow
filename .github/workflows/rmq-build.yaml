@@ -59,13 +59,13 @@ jobs:
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
-              reportgenerator -reports:testResults/**/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
+              reportgenerator -reports:testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
               coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
               echo "Test Coverage: $coverage%"
               if (( $(echo "$coverage < 85.0" | bc -l) )); then
-                echo "Test coverage is below 85% - failing the build."
-                exit 1                                                                                                                  
-              fi
+                 echo "Test coverage is below 85% - failing the build."
+                 exit 1
+              fi   
          shell: bash            
      # Step 9: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
