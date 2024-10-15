@@ -55,6 +55,9 @@ jobs:
               cd RMQApi/RMQApi.Tests   
               dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura 
          continue-on-error: false
+     # Temporary step to list files in testResults
+       - name: List test results directory
+         run: ls -R testResults
      # Step 8: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
          run: |
@@ -65,7 +68,6 @@ jobs:
               if (( $(echo "$coverage < 85.0" | bc -l) )); then
                  echo "Test coverage is below 85% - failing the build."
                  exit 1
-              fi   
          shell: bash            
      # Step 9: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
