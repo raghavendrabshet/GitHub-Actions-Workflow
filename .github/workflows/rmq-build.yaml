@@ -36,7 +36,8 @@ jobs:
             dotnet-version: '8.x'
      # Step 4: Restore .NET dependencies
        - name: Restore dependencies
-         run: dotnet restore dotnet restore /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj
+         run: |
+              dotnet restore /home/raghavendrabshet/Raghavendra/GitHub-Actions-Workflow/.github/workflows/RMQApi/RMQApi.csproj
      # Step 5: Build the RabbitMQ application
        - name: Build the RabbitMQ application
          run: dotnet build --configuration Release --no-restore
