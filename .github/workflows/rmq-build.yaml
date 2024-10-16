@@ -61,7 +61,7 @@ jobs:
      # Step 8: Print the test coverage summary before parsing
        - name: Print test coverage summary
          run: cat testResults/coverage/Summary.txt 
-     # Step 8: Verify test coverage (requires minimum of 85%)
+     # Step 9: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
@@ -83,11 +83,11 @@ jobs:
               echo "Coverage is 0%. This is expected as there are no tests yet."
               fi   
          shell: bash            
-     # Step 9: Build Docker image using the Dockerfile in the root of the repository
+     # Step 10: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
          run: |
               docker build -t rmq-app:${{ github.sha }} .
-     # Step 10: Push Docker image to Harbor if conditions are met
+     # Step 11: Push Docker image to Harbor if conditions are met
        - name: Push Docker image to Harbor
          if: ${{ github.event_name == 'push' || github.event.inputs.push == 'true' }}
          run: |
