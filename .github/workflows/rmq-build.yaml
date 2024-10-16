@@ -53,15 +53,19 @@ jobs:
        - name: Run unit tests
          run: |
               cd RMQApi/RMQApi.Tests
-              dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./testResults/   
-         continue-on-error: false
-     # Temporary step to list files in testResults
+              dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults \
+                  /p:CollectCoverage=true \
+                  /p:CoverletOutputFormat=cobertura \
+                  /p:CoverletOutput=./testResults/ \
+                  /p:Exclude="[xunit*]*" \
+                  /p:MergeWith=./testResults/coverage.cobertura.xml   
+     # Step 8: List test results directory
        - name: List test results directory
          run: ls -R ./RMQApi/RMQApi.Tests/testResults/
-     # Step 8: Print the test coverage summary before parsing
+     # Step 9: Print the test coverage summary before parsing
        - name: Print test coverage summary
          run: cat ./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml 
-     # Step 9: Verify test coverage (requires minimum of 85%)
+     # Step 10: Verify test coverage (requires minimum of 85%)
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
@@ -86,11 +90,11 @@ jobs:
                  exit 1
               fi
               echo "Test coverage is above 85%."
-     # Step 10: Build Docker image using the Dockerfile in the root of the repository
+     # Step 11: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
          run: |
               docker build -t rmq-app:${{ github.sha }} .
-     # Step 11: Push Docker image to Harbor if conditions are met
+     # Step 12: Push Docker image to Harbor if conditions are met
        - name: Push Docker image to Harbor
          if: ${{ github.event_name == 'push' || github.event.inputs.push == 'true' }}
          run: |
