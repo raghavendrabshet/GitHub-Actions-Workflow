@@ -65,20 +65,23 @@ jobs:
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
-              reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./RMQApi/RMQApi.Tests/testResults 
-              coverage=$(grep -oP 'Line coverage:\s*\K\d+(\.\d+)?' ./RMQApi/RMQApi.Tests/testResults/)
+              reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./testResults/coverage -reporttypes:TextSummary
+              coverage=$(grep -oP 'Line coverage:\s*\K\d+(\.\d+)?' testResults/coverage/Summary.txt)
+                                            
+              # Debugging step to show the coverage value
+              echo "Coverage extracted: $coverage"
               # Check if coverage is empty
               if [[ -z "$coverage" ]]; then
                  echo "No coverage data found - failing the build."
                  exit 1
               fi
+                                                        
               # Check if coverage is below 85%
               if (( $(echo "$coverage < 85.0" | bc -l) )); then
                  echo "Test coverage is below 85% - failing the build."
                  exit 1
               fi
               echo "Test coverage is above 85%."   
-         shell: bash            
      # Step 10: Build Docker image using the Dockerfile in the root of the repository
        - name: Build Docker image
          run: |
