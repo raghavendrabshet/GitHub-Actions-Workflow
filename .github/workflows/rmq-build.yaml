@@ -66,7 +66,7 @@ jobs:
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
               reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./testResults/coverage -reporttypes:TextSummary 
-              
+              coverage=$(grep -oP 'Line coverage:\s*\K\d+(\.\d+)?' testResults/coverage/Summary.txt)
               # Check if coverage is empty
               if [[ -z "$coverage" ]]; then
                  echo "No coverage data found - failing the build."
