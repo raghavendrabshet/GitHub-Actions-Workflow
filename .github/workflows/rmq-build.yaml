@@ -65,8 +65,8 @@ jobs:
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
-              reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./testResults/coverage -reporttypes:TextSummary
-              coverage=$(grep -oP 'Line coverage:\s*\K\d+(\.\d+)?' testResults/coverage/Summary.txt)
+              reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./testResults/coverage -reporttypes:xml
+              coverage=$(grep -oP 'Line coverage:\s*\K\d+(\.\d+)?' ./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml)
               echo "Test Coverage: $coverage%"
 
               # Check if coverage is empty
