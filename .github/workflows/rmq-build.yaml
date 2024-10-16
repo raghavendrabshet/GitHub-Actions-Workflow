@@ -57,7 +57,7 @@ jobs:
          continue-on-error: false
      # Temporary step to list files in testResults
        - name: List test results directory
-         run: ls -R testResults
+         run: ls -R .
      # Step 8: Print the test coverage summary before parsing
        - name: Print test coverage summary
          run: cat testResults/coverage/Summary.txt 
