@@ -53,12 +53,12 @@ jobs:
        - name: Run unit tests
          run: |
               cd RMQApi/RMQApi.Tests
+              mkdir -p ./testResults
               dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./testResults \
                   /p:CollectCoverage=true \
                   /p:CoverletOutputFormat=cobertura \
-                  /p:CoverletOutput=./testResults/ \
-                  /p:Exclude="[xunit*]*" \
-                  /p:MergeWith=./testResults/coverage.cobertura.xml   
+                  /p:CoverletOutput=./testResults/coverage.cobertura.xml \
+                  /p:Exclude="[xunit*]*"
      # Step 8: List test results directory
        - name: List test results directory
          run: ls -R ./RMQApi/RMQApi.Tests/testResults/
