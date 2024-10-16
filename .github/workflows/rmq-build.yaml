@@ -65,7 +65,7 @@ jobs:
        - name: Check test coverage
          run: |
               dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.*
-              reportgenerator -reports:RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:testResults/coverage -reporttypes:TextSummary
+              reportgenerator -reports:./RMQApi/RMQApi.Tests/testResults/coverage.cobertura.xml -targetdir:./testResults/coverage -reporttypes:TextSummary
               coverage=$(cat testResults/coverage/Summary.txt | grep -Po '(?<=Line coverage: )\d+(\.\d+)?')
               echo "Test Coverage: $coverage%"
 
